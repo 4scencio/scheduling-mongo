@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1 class="text-center">Cadastro de Consulta</h1>
+        <hr>
+        <form class="form-control-lg">
+            <label for="name" class="badge bg-light text-dark">Nome do Paciente</label>
+            <input type="text" name="name" id="name" placeholder="Digite o nome completo" class="form-control">
+            <br>
+            <label for="email" class="badge bg-light text-dark">E-mail do paciente</label>
+            <input type="email" name="email" id="email" placeholder="Digite um e-mail válido" class="form-control">
+            <br>
+            <label for="cpf" class="badge bg-light text-dark">CPF do Paciente</label>
+            <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF" class="form-control cpf">
+            <br>
+            <label for="description" class="badge bg-light text-dark">Breve descrição da consulta</label>
+            <input type="text" name="description" id="description" placeholder="Descrição da Consulta" class="form-control">
+            <br>
+            <label for="date" class="badge bg-light text-dark">Data da Consulta</label>
+            <input type="date" name="date" id="date" placeholder="Insira a Data" class="form-control">
+            <br>
+            <label for="time" class="badge bg-light text-dark">Horário da Consulta</label>
+            <input type="time" name="time" id="time" placeholder="Hora" class="form-control">
+            <br>
+            <button type="button" class="btn btn-success form-control">Agendar</button>
+        </form>
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+<script src="jquery.mask.min.js"></script>
+
+<script>
+    $('.cpf').mask('000.000.000-00');
+</script>
+</html>
