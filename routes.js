@@ -1,14 +1,35 @@
-const express = require('express');
+const express = require("express");
 
 const router = express.Router();
 
-router.get('/', (req, res) =>{
-    res.json({resposta: 'Rota OK'})
-})
+//Serivces
+const appointmentService = require("./services/AppointmentService");
 
-router.get('/cadastro', (req, res) =>{
-    res.render('create')
-})
+router.get("/", (req, res) => {
+  res.json({ resposta: "Página Inicial" });
+});
 
+router.get("/create", (req, res) => {
+  res.render("create");
+});
+
+router.post("/create", async (req, res) => {
+    const { name, email, description, cpf, date, time } = req.body
+  const newAppointment = await appointmentService.create(
+      name,
+      email,
+      description,
+      cpf,
+      date,
+      time
+  );
+
+      if(newAppointment) {
+          res.json({message: 'Consulta agendada com sucesso'})
+      } else {
+          res.json({error: 'Preencha os campos corretamente'})
+      }
+
+});
 
 module.exports = router;

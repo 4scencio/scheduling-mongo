@@ -15,7 +15,7 @@
         <br>
         <h1 class="text-center">Cadastro de Consulta</h1>
         <hr>
-        <form class="form-control-lg">
+        <form method="POST" action="/create" class="form-control-lg">
             <label for="name" class="badge bg-light text-dark">Nome do Paciente</label>
             <input type="text" name="name" id="name" placeholder="Digite o nome completo" class="form-control">
             <br>
@@ -34,7 +34,7 @@
             <label for="time" class="badge bg-light text-dark">Horário da Consulta</label>
             <input type="time" name="time" id="time" placeholder="Hora" class="form-control">
             <br>
-            <button type="button" class="btn btn-success form-control">Agendar</button>
+            <button type="button submit" class="btn btn-success form-control">Agendar</button>
         </form>
     </div>
     

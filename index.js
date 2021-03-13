@@ -4,6 +4,11 @@ const router = require ('./routes')
 const mongoose = require('mongoose')
 
 app.use(express.static('public'))
+
+// parse application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: false }))
+ 
+// parse application/json
 app.use(express.json())
 
 app.use(router)
