@@ -19,7 +19,9 @@
 
     const calendar = new FullCalendar.Calendar(element, {
         initialView: 'dayGridMonth',
-        locale: 'pt-br'
+        locale: 'pt-br',
+        //events é a rota que vai carregar as informações (precisa ter id, title, start e end)
+        events: 'getcalendar'
     })
 
     calendar.render()

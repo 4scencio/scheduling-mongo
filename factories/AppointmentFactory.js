@@ -9,7 +9,7 @@ class AppointmentFactory {
         const startDate = new Date(year, month, day, hour, minutes, 0, 0)
 
         //Fuso horário em: Brasília - DF (GMT-3)
-        startDate.setHours(startDate.getHours() -3)
+        // startDate.setHours(startDate.getHours() -3)
 
         const AppointmentUpdated = {
             id: simpleAppointment._id,
