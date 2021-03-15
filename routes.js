@@ -6,7 +6,7 @@ const router = express.Router();
 const appointmentService = require("./services/AppointmentService");
 
 router.get("/", (req, res) => {
-  res.json({ resposta: "Página Inicial" });
+  res.render('index')
 });
 
 router.get("/create", (req, res) => {
